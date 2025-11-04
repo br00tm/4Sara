@@ -216,7 +216,7 @@ const EraHighlight = ({
           className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/15 px-5 py-2 text-sm font-semibold text-white shadow shadow-black/20 transition hover:bg-white/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
         >
           <Music size={18} aria-hidden />
-          Ouvir mAsica tema
+          Ouvir musica tema
           <ArrowUpRight size={16} aria-hidden />
         </button>
         <button
