@@ -28,17 +28,18 @@ const formatDate = (date: Date, locale = 'pt-BR') =>
 const romanticSummaries: Record<EraSlug, string> = {
   showgirl:
     'Prometo te amar com calma nos dias comuns e com brilho de show nas noites especiais.',
-  lover: 'Cada batida do meu coracao sussurra: eu escolho voce, hoje e sempre.',
-  midnights: 'O nosso amor e meu lugar seguro, meu palco favorito e meu melhor refrano.',
-  folklore: 'Vamos continuar escrevendo capitulos onde o final feliz e so o comeco.',
-  evermore: 'Nada e mais bonito do que dividir sonhos e cobertas com voce.',
-  '1989': 'Voce e o verso que faltava na cancao que eu sempre quis cantar.',
-  reputation: 'Nosso amor e constelacao: mesmo de olhos fechados, eu encontro o caminho ate voce.',
-  red: 'Segurar sua mao transforma qualquer segunda-feira em noite estrelada.',
+  lover: 'Cada batida do meu coração sussurra: eu escolho você, hoje e sempre.',
+  midnights: 'O nosso amor é meu lugar seguro, meu palco favorito e meu melhor refrão.',
+  folklore: 'Vamos continuar escrevendo capítulos onde o final feliz é só o começo.',
+  evermore: 'Nada é mais bonito do que dividir sonhos e cobertas com você.',
+  '1989': 'Você é o verso que faltava na canção que eu sempre quis cantar.',
+  reputation:
+    'Nosso amor é constelação: mesmo de olhos fechados, eu encontro o caminho até você.',
+  red: 'Segurar sua mão transforma qualquer segunda-feira em noite estrelada.',
   'speak-now': 'Que nossos planos tenham o tamanho da nossa coragem de amar.',
-  fearless: 'Quando penso em futuro, so consigo imaginar seu sorriso abrindo a porta de casa.',
-  debut: 'Nosso amor e meu norte: onde voce estiver, e la que eu quero ficar.',
-  ttpd: 'Ate nas paginas mais sombrias, eu encontro luz quando penso em nos dois.',
+  fearless: 'Quando penso em futuro, só consigo imaginar seu sorriso abrindo a porta de casa.',
+  debut: 'Nosso amor é meu norte: onde você estiver, é lá que eu quero ficar.',
+  ttpd: 'Até nas páginas mais sombrias, eu encontro luz quando penso em nós dois.',
 }
 
 const getRomanticSummary = (id: EraSlug) => romanticSummaries[id]
@@ -163,7 +164,7 @@ const ShuffleOverlay = ({
             </div>
             <div className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-inner shadow-black/20">
               <p className="flex items-center gap-2 text-xs uppercase tracking-[0.4em] text-slate-300/70">
-                <Sparkles size={16} aria-hidden /> Frase romantica
+                <Sparkles size={16} aria-hidden /> Frase romântica
               </p>
               <p className="mt-3 text-lg font-semibold text-white">{result.phrase}</p>
             </div>
@@ -216,7 +217,7 @@ const EraHighlight = ({
           className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/15 px-5 py-2 text-sm font-semibold text-white shadow shadow-black/20 transition hover:bg-white/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
         >
           <Music size={18} aria-hidden />
-          Ouvir musica tema
+          Ouvir música tema
           <ArrowUpRight size={16} aria-hidden />
         </button>
         <button
@@ -281,8 +282,8 @@ const App = () => {
                 As nossas eras
               </h1>
               <p className="max-w-2xl text-sm text-slate-300/90 sm:text-base">
-                Uma timeline romantica inspirada nas eras da Taylor para eternizar os nossos momentos
-                favoritos. Escolha a Era que mais combina com o mood do dia ou deixe o destino escolher
+                Uma timeline romântica inspirada nas eras da Taylor para eternizar os nossos momentos
+                favoritos. Escolha a era que mais combina com o mood do dia ou deixe o destino escolher
                 com o shuffle.
               </p>
             </div>
@@ -301,7 +302,7 @@ const App = () => {
               {eras.length} eras
             </span>
             <span className="rounded-full border border-white/10 bg-white/5 px-4 py-1">
-              {Object.keys(romanticSummaries).length} frases romanticas
+              {Object.keys(romanticSummaries).length} frases românticas
             </span>
             <span className="rounded-full border border-white/10 bg-white/5 px-4 py-1">
               Tema escuro &amp; mobile-first
@@ -322,7 +323,7 @@ const App = () => {
                 Escolha outra era
               </h2>
               <p className="text-sm text-slate-300/80 sm:text-base">
-                Explore cada capitulo da nossa historia e troque o destaque quando quiser.
+                Explore cada capítulo da nossa história e troque o destaque quando quiser.
               </p>
             </div>
             <button

@@ -63,7 +63,7 @@ export const eras: Era[] = [
     images: [
       {
         src: '/assets/photos/1762298664000.jpg',
-        alt: 'Nos dois abracados em clima showgirl, cheios de brilho.',
+        alt: 'Nós dois abraçados em clima showgirl, cheios de brilho.',
       },
       {
         src: '/assets/eras/showgirl.svg',
@@ -78,7 +78,7 @@ export const eras: Era[] = [
     quote: '"I take this magnetic force of a man to be my lover."',
     quoteSource: 'Lover',
     summary:
-      'Cada batida do meu coracao sussurra: eu escolho voce, hoje e sempre.',
+      'Cada batida do meu coração sussurra: eu escolho você, hoje e sempre.',
     song: {
       title: 'Lover',
       url: 'https://open.spotify.com/track/1dGr1c8CrMLDpV6mPbImSI',
@@ -92,7 +92,7 @@ export const eras: Era[] = [
     images: [
       {
         src: '/assets/photos/1762298664004.jpg',
-        alt: 'Nos dois de maos dadas sob um ceu cor-de-rosa estilo Lover.',
+        alt: 'Nós dois de mãos dadas sob um céu cor-de-rosa estilo Lover.',
       },
       {
         src: '/assets/eras/lover.svg',
@@ -107,7 +107,7 @@ export const eras: Era[] = [
     quote: '"I just want to stay in that lavender haze."',
     quoteSource: 'Lavender Haze',
     summary:
-      'O nosso amor e meu lugar seguro, meu palco favorito e meu melhor refrano.',
+      'O nosso amor é meu lugar seguro, meu palco favorito e meu melhor refrão.',
     song: {
       title: 'Lavender Haze',
       url: 'https://open.spotify.com/track/2KkIiEt1WIHOYItqkD30kR',
@@ -121,7 +121,7 @@ export const eras: Era[] = [
     images: [
       {
         src: '/assets/photos/1762298664010.jpeg',
-        alt: 'Nos dois juntos ao luar, remetendo a era Midnights.',
+        alt: 'Nós dois juntos ao luar, remetendo à era Midnights.',
       },
       {
         src: '/assets/eras/midnights.svg',
@@ -136,7 +136,7 @@ export const eras: Era[] = [
     quote: '"You put me on and said I was your favorite."',
     quoteSource: 'cardigan',
     summary:
-      'Vamos continuar escrevendo capitulos onde o final feliz e so o comeco.',
+      'Vamos continuar escrevendo capítulos onde o final feliz é só o começo.',
     song: {
       title: 'cardigan',
       url: 'https://open.spotify.com/track/4R2kfaDFhslZEMJqAFNpdd',
@@ -150,7 +150,7 @@ export const eras: Era[] = [
     images: [
       {
         src: '/assets/photos/1762298664015.png',
-        alt: 'Nos dois em um cenario aconchegante que lembra a era Folklore.',
+        alt: 'Nós dois em um cenário aconchegante que lembra a era Folklore.',
       },
       {
         src: '/assets/eras/folklore.svg',
@@ -165,7 +165,7 @@ export const eras: Era[] = [
     quote: '"Wherever you stray, I follow."',
     quoteSource: 'willow',
     summary:
-      'Nada e mais bonito do que dividir sonhos e cobertas com voce.',
+      'Nada é mais bonito do que dividir sonhos e cobertas com você.',
     song: {
       title: 'willow',
       url: 'https://open.spotify.com/track/0lx2cLdOt3piJbcaXIV74f',
@@ -179,7 +179,7 @@ export const eras: Era[] = [
     images: [
       {
         src: '/assets/photos/1762298664021.jpg',
-        alt: 'Nos dois em clima outonal representando a era Evermore.',
+        alt: 'Nós dois em clima outonal representando a era Evermore.',
       },
       {
         src: '/assets/eras/evermore.svg',
@@ -194,7 +194,7 @@ export const eras: Era[] = [
     quote: '"And when we go crashing down, we come back every time."',
     quoteSource: 'Style (Taylor\'s Version)',
     summary:
-      'Voce e o verso que faltava na cancao que eu sempre quis cantar.',
+      'Você é o verso que faltava na canção que eu sempre quis cantar.',
     song: {
       title: "Style (Taylor's Version)",
       url: 'https://open.spotify.com/track/4lIxdJw6W3Fg4vUIYCB0S5',
@@ -208,7 +208,7 @@ export const eras: Era[] = [
     images: [
       {
         src: '/assets/photos/1762298664026.jpg',
-        alt: 'Nos dois sorrindo em clima urbano, bem era 1989.',
+        alt: 'Nós dois sorrindo em clima urbano, bem era 1989.',
       },
       {
         src: '/assets/eras/1989.svg',
@@ -223,7 +223,7 @@ export const eras: Era[] = [
     quote: '"You must like me for me."',
     quoteSource: 'Delicate',
     summary:
-      'Nosso amor e constelacao: mesmo de olhos fechados, eu encontro o caminho ate voce.',
+      'Nosso amor é constelação: mesmo de olhos fechados, eu encontro o caminho até você.',
     song: {
       title: 'Delicate',
       url: 'https://open.spotify.com/track/6NFyWDv5CjfwuzoCkw47Xf',
@@ -237,7 +237,7 @@ export const eras: Era[] = [
     images: [
       {
         src: '/assets/photos/1762298664030.jpg',
-        alt: 'Nos dois em pose confiante inspirada na era Reputation.',
+        alt: 'Nós dois em pose confiante inspirada na era Reputation.',
       },
       {
         src: '/assets/eras/reputation.svg',
@@ -252,7 +252,7 @@ export const eras: Era[] = [
     quote: '"You told me about your past thinking your future was me."',
     quoteSource: 'All Too Well (10 Minute Version) (Taylor\'s Version)',
     summary:
-      'Segurar sua mao transforma qualquer segunda-feira em noite estrelada.',
+      'Segurar sua mão transforma qualquer segunda-feira em noite estrelada.',
     song: {
       title: "All Too Well (10 Minute Version) (Taylor's Version)",
       url: 'https://open.spotify.com/track/04m2nJR2Ia6d1ZOt8gi5xA',
@@ -266,7 +266,7 @@ export const eras: Era[] = [
     images: [
       {
         src: '/assets/photos/1762298664037.jpg',
-        alt: 'Nos dois em um abraco quente evocando a era Red.',
+        alt: 'Nós dois em um abraço quente evocando a era Red.',
       },
       {
         src: '/assets/eras/red.svg',
@@ -295,7 +295,7 @@ export const eras: Era[] = [
     images: [
       {
         src: '/assets/photos/1762298664042.jpg',
-        alt: 'Nos dois vivendo um momento magico digno da era Speak Now.',
+        alt: 'Nós dois vivendo um momento mágico digno da era Speak Now.',
       },
       {
         src: '/assets/eras/speak-now.svg',
@@ -310,7 +310,7 @@ export const eras: Era[] = [
     quote: '"Marry me Juliet, you will never have to be alone."',
     quoteSource: 'Love Story (Taylor\'s Version)',
     summary:
-      'Quando penso em futuro, so consigo imaginar seu sorriso abrindo a porta de casa.',
+      'Quando penso em futuro, só consigo imaginar seu sorriso abrindo a porta de casa.',
     song: {
       title: "Love Story (Taylor's Version)",
       url: 'https://open.spotify.com/track/1vrd6UOGamcKNGnSHJQlSt',
@@ -324,7 +324,7 @@ export const eras: Era[] = [
     images: [
       {
         src: '/assets/photos/1762298664046.jpg',
-        alt: 'Nos dois dancando felizes na vibe da era Fearless.',
+        alt: 'Nós dois dançando felizes na vibe da era Fearless.',
       },
       {
         src: '/assets/eras/fearless.svg',
@@ -339,7 +339,7 @@ export const eras: Era[] = [
     quote: '"When you think Tim McGraw, I hope you think of me."',
     quoteSource: 'Tim McGraw',
     summary:
-      'Nosso amor e meu norte: onde voce estiver, e la que eu quero ficar.',
+      'Nosso amor é meu norte: onde você estiver, é lá que eu quero ficar.',
     song: {
       title: 'Tim McGraw',
       url: 'https://open.spotify.com/track/0Om9WAB5RS09L80DyOfTNa',
@@ -353,7 +353,7 @@ export const eras: Era[] = [
     images: [
       {
         src: '/assets/photos/1762298664068.png',
-        alt: 'Nos dois em clima country doce, lembrando a era Debut.',
+        alt: 'Nós dois em clima country doce, lembrando a era Debut.',
       },
       {
         src: '/assets/eras/debut.svg',
@@ -368,7 +368,7 @@ export const eras: Era[] = [
     quote: '"I love you."',
     quoteSource: 'Fortnight (feat. Post Malone)',
     summary:
-      'Ate nas paginas mais sombrias, eu encontro luz quando penso em nos dois.',
+      'Até nas páginas mais sombrias, eu encontro luz quando penso em nós dois.',
     song: {
       title: 'Fortnight (feat. Post Malone)',
       url: 'https://open.spotify.com/track/2OzhQlSqBEmt7hmkYxfT6m',
@@ -382,7 +382,7 @@ export const eras: Era[] = [
     images: [
       {
         src: '/assets/photos/1762298664073.jpg',
-        alt: 'Nos dois em foto intimista para a era The Tortured Poets.',
+        alt: 'Nós dois em foto intimista para a era The Tortured Poets.',
       },
       {
         src: '/assets/eras/ttpd.svg',
