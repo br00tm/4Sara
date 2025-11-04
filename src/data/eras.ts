@@ -10,6 +10,7 @@ export type EraSlug =
   | 'evermore'
   | 'midnights'
   | 'ttpd'
+  | 'showgirl'
 
 export interface EraTheme {
   accent: string
@@ -32,7 +33,6 @@ export interface Era {
   id: EraSlug
   title: string
   period: string
-  tagline: string
   quote: string
   quoteSource?: string
   summary: string
@@ -43,14 +43,42 @@ export interface Era {
 
 export const eras: Era[] = [
   {
+    id: 'showgirl',
+    title: 'The Life of a Showgirl Era',
+    period: '2025 - agora',
+    quote: '"Hand in hand under marquee lights, you swear I am your favorite scene."',
+    quoteSource: 'The Fate of Ophelia',
+    summary:
+      'Prometo te amar com calma nos dias comuns e com brilho de show nas noites especiais.',
+    song: {
+      title: 'The Fate of Ophelia',
+      url: 'https://open.spotify.com/track/53iuhJlwXhSER5J2IYYv1W',
+    },
+    theme: {
+      accent: '#f7c948',
+      accentSoft: 'rgba(247, 201, 72, 0.45)',
+      background: 'linear-gradient(135deg, rgba(247,201,72,0.65), rgba(236,72,153,0.55))',
+      cardGlow: 'rgba(247, 201, 72, 0.4)',
+    },
+    images: [
+      {
+        src: '/assets/photos/1762298664000.jpg',
+        alt: 'Nos dois abracados em clima showgirl, cheios de brilho.',
+      },
+      {
+        src: '/assets/eras/showgirl.svg',
+        alt: 'Gradiente vibrante inspirado na era The Life of a Showgirl.',
+      },
+    ],
+  },
+  {
     id: 'lover',
     title: 'Lover Era',
-    period: '2019 — 2020',
-    tagline: 'Soft pastels, handwritten vows, and a world built for two.',
-    quote: '“I\'ve loved you three summers now, honey, I want ’em all.”',
+    period: '2019 - 2020',
+    quote: '"I take this magnetic force of a man to be my lover."',
     quoteSource: 'Lover',
     summary:
-      'Holding hands in the pink glow of sunrise, promising to keep choosing each other—this era is unabashedly romantic.',
+      'Cada batida do meu coracao sussurra: eu escolho voce, hoje e sempre.',
     song: {
       title: 'Lover',
       url: 'https://open.spotify.com/track/1dGr1c8CrMLDpV6mPbImSI',
@@ -63,23 +91,26 @@ export const eras: Era[] = [
     },
     images: [
       {
+        src: '/assets/photos/1762298664004.jpg',
+        alt: 'Nos dois de maos dadas sob um ceu cor-de-rosa estilo Lover.',
+      },
+      {
         src: '/assets/eras/lover.svg',
-        alt: 'Soft pastel gradient inspired by the Lover era.',
+        alt: 'Gradiente em tons pastel inspirado na Lover Era.',
       },
     ],
   },
   {
     id: 'midnights',
     title: 'Midnights Era',
-    period: '2022 — 2023',
-    tagline: 'Late night confessions, candlelight playlists, and sequined skies.',
-    quote: '“Meet me at midnight.”',
+    period: '2022 - 2023',
+    quote: '"I just want to stay in that lavender haze."',
     quoteSource: 'Lavender Haze',
     summary:
-      'Electric-blue nights curled up on the sofa, whispering dreams while the city sleeps—this era is all about intimate midnight magic.',
+      'O nosso amor e meu lugar seguro, meu palco favorito e meu melhor refrano.',
     song: {
       title: 'Lavender Haze',
-      url: 'https://open.spotify.com/track/7Dr1qMF9CZY0dA7C0h22xb',
+      url: 'https://open.spotify.com/track/2KkIiEt1WIHOYItqkD30kR',
     },
     theme: {
       accent: '#6d9bff',
@@ -89,23 +120,26 @@ export const eras: Era[] = [
     },
     images: [
       {
+        src: '/assets/photos/1762298664010.jpeg',
+        alt: 'Nos dois juntos ao luar, remetendo a era Midnights.',
+      },
+      {
         src: '/assets/eras/midnights.svg',
-        alt: 'Deep blue gradient with stardust glow for the Midnights era.',
+        alt: 'Gradiente azul profundo com brilho de estrelas para a Midnights Era.',
       },
     ],
   },
   {
     id: 'folklore',
     title: 'Folklore Era',
-    period: '2020 — 2021',
-    tagline: 'Forest walks, knitted sweaters, and whispered storybooks.',
-    quote: '“And isn’t it just so pretty to think…”',
-    quoteSource: 'The Last Great American Dynasty',
+    period: '2020 - 2021',
+    quote: '"You put me on and said I was your favorite."',
+    quoteSource: 'cardigan',
     summary:
-      'Quiet days spent wandering through pines, writing letters, and building a world where our stories feel like folklore.',
+      'Vamos continuar escrevendo capitulos onde o final feliz e so o comeco.',
     song: {
       title: 'cardigan',
-      url: 'https://open.spotify.com/track/4gMgiXfqyzZLMhsksGmbQV',
+      url: 'https://open.spotify.com/track/4R2kfaDFhslZEMJqAFNpdd',
     },
     theme: {
       accent: '#d8d2c2',
@@ -115,23 +149,26 @@ export const eras: Era[] = [
     },
     images: [
       {
+        src: '/assets/photos/1762298664015.png',
+        alt: 'Nos dois em um cenario aconchegante que lembra a era Folklore.',
+      },
+      {
         src: '/assets/eras/folklore.svg',
-        alt: 'Warm muted gradient for the Folklore era.',
+        alt: 'Gradiente quente e suave inspirado na Folklore Era.',
       },
     ],
   },
   {
     id: 'evermore',
     title: 'Evermore Era',
-    period: '2020 — 2021',
-    tagline: 'Golden hour promises and cozy cabin hideaways.',
-    quote: '“In the cracks of light, I dreamed of you.”',
-    quoteSource: 'gold rush',
+    period: '2020 - 2021',
+    quote: '"Wherever you stray, I follow."',
+    quoteSource: 'willow',
     summary:
-      'Candlelit dinners, long drives through autumn backroads, and the feeling that forever is already happening.',
+      'Nada e mais bonito do que dividir sonhos e cobertas com voce.',
     song: {
       title: 'willow',
-      url: 'https://open.spotify.com/track/2gMXnyrvIjhVBUZwvLZDMP',
+      url: 'https://open.spotify.com/track/0lx2cLdOt3piJbcaXIV74f',
     },
     theme: {
       accent: '#f1ba7b',
@@ -141,23 +178,26 @@ export const eras: Era[] = [
     },
     images: [
       {
+        src: '/assets/photos/1762298664021.jpg',
+        alt: 'Nos dois em clima outonal representando a era Evermore.',
+      },
+      {
         src: '/assets/eras/evermore.svg',
-        alt: 'Golden copper gradient for the Evermore era.',
+        alt: 'Gradiente dourado e cobre inspirado na Evermore Era.',
       },
     ],
   },
   {
     id: '1989',
     title: '1989 Era',
-    period: '2014 — 2017',
-    tagline: 'City skylines, polaroids, and windblown kisses.',
-    quote: '“Take me home, just take me home.”',
-    quoteSource: 'Style',
+    period: '2014 - 2017',
+    quote: '"And when we go crashing down, we come back every time."',
+    quoteSource: 'Style (Taylor\'s Version)',
     summary:
-      'Sneaking away to the beach, dancing in headlights, and saving every snapshot of our bright neon adventures.',
+      'Voce e o verso que faltava na cancao que eu sempre quis cantar.',
     song: {
-      title: 'Style',
-      url: 'https://open.spotify.com/track/0ug5NqcwcFR2xrfTkc7k8e',
+      title: "Style (Taylor's Version)",
+      url: 'https://open.spotify.com/track/4lIxdJw6W3Fg4vUIYCB0S5',
     },
     theme: {
       accent: '#9bd6ff',
@@ -167,20 +207,23 @@ export const eras: Era[] = [
     },
     images: [
       {
+        src: '/assets/photos/1762298664026.jpg',
+        alt: 'Nos dois sorrindo em clima urbano, bem era 1989.',
+      },
+      {
         src: '/assets/eras/1989.svg',
-        alt: 'Sky blue gradient for the 1989 era.',
+        alt: 'Gradiente azul ceu inspirado na 1989 Era.',
       },
     ],
   },
   {
     id: 'reputation',
     title: 'Reputation Era',
-    period: '2017 — 2019',
-    tagline: 'Neon-lit rooftops, private jokes, lovers vs. the world.',
-    quote: '“All of this silence and patience, pining and anticipation.”',
-    quoteSource: '…Ready For It?',
+    period: '2017 - 2019',
+    quote: '"You must like me for me."',
+    quoteSource: 'Delicate',
     summary:
-      'Sharing secrets by the glow of the city, choosing each other louder than the noise—this era is bold devotion.',
+      'Nosso amor e constelacao: mesmo de olhos fechados, eu encontro o caminho ate voce.',
     song: {
       title: 'Delicate',
       url: 'https://open.spotify.com/track/6NFyWDv5CjfwuzoCkw47Xf',
@@ -193,23 +236,26 @@ export const eras: Era[] = [
     },
     images: [
       {
+        src: '/assets/photos/1762298664030.jpg',
+        alt: 'Nos dois em pose confiante inspirada na era Reputation.',
+      },
+      {
         src: '/assets/eras/reputation.svg',
-        alt: 'Smoky monochrome gradient for the Reputation era.',
+        alt: 'Gradiente monocromatico inspirado na Reputation Era.',
       },
     ],
   },
   {
     id: 'red',
     title: 'Red Era',
-    period: '2012 — 2014',
-    tagline: 'Scarlet scarves, handwritten letters, and fall road trips.',
-    quote: '“Loving him is red.”',
-    quoteSource: 'Red',
+    period: '2012 - 2014',
+    quote: '"You told me about your past thinking your future was me."',
+    quoteSource: 'All Too Well (10 Minute Version) (Taylor\'s Version)',
     summary:
-      'Bonfires, cinnamon kisses, and getting swept away in every color of the heart—this era is fiery, nostalgic love.',
+      'Segurar sua mao transforma qualquer segunda-feira em noite estrelada.',
     song: {
-      title: 'All Too Well (10 Minute Version)',
-      url: 'https://open.spotify.com/track/5enxwA8aAbwZbf5qCHORXi',
+      title: "All Too Well (10 Minute Version) (Taylor's Version)",
+      url: 'https://open.spotify.com/track/04m2nJR2Ia6d1ZOt8gi5xA',
     },
     theme: {
       accent: '#ff9a9e',
@@ -219,23 +265,26 @@ export const eras: Era[] = [
     },
     images: [
       {
+        src: '/assets/photos/1762298664037.jpg',
+        alt: 'Nos dois em um abraco quente evocando a era Red.',
+      },
+      {
         src: '/assets/eras/red.svg',
-        alt: 'Saturated crimson gradient for the Red era.',
+        alt: 'Gradiente vermelho saturado inspirado na Red Era.',
       },
     ],
   },
   {
     id: 'speak-now',
     title: 'Speak Now Era',
-    period: '2010 — 2012',
-    tagline: 'Purple ballgowns, grand gestures, and love letters with sparkles.',
-    quote: '“Please don’t be in love with someone else.”',
+    period: '2010 - 2012',
+    quote: '"Please don\'t be in love with someone else."',
     quoteSource: 'Enchanted',
     summary:
-      'Spontaneous escapes, dramatic declarations, and the courage to say what the heart is really feeling.',
+      'Que nossos planos tenham o tamanho da nossa coragem de amar.',
     song: {
-      title: 'Enchanted',
-      url: 'https://open.spotify.com/track/2ZBNclC5wm4GtiWaeh0DMf',
+      title: "Enchanted (Taylor's Version)",
+      url: 'https://open.spotify.com/track/10eBRyImhfqVvkiVEGf0N0',
     },
     theme: {
       accent: '#caa5f5',
@@ -245,23 +294,26 @@ export const eras: Era[] = [
     },
     images: [
       {
+        src: '/assets/photos/1762298664042.jpg',
+        alt: 'Nos dois vivendo um momento magico digno da era Speak Now.',
+      },
+      {
         src: '/assets/eras/speak-now.svg',
-        alt: 'Amethyst gradient for the Speak Now era.',
+        alt: 'Gradiente roxo inspirado na Speak Now Era.',
       },
     ],
   },
   {
     id: 'fearless',
     title: 'Fearless Era',
-    period: '2008 — 2010',
-    tagline: 'Golden sparkle lights, fairytale endings, fearless hearts.',
-    quote: '“You take my hand and drag me head first—fearless.”',
-    quoteSource: 'Fearless',
+    period: '2008 - 2010',
+    quote: '"Marry me Juliet, you will never have to be alone."',
+    quoteSource: 'Love Story (Taylor\'s Version)',
     summary:
-      'Driving with the windows down, dancing barefoot in the kitchen, believing in love stories and happily-ever-afters.',
+      'Quando penso em futuro, so consigo imaginar seu sorriso abrindo a porta de casa.',
     song: {
-      title: 'Love Story',
-      url: 'https://open.spotify.com/track/5xXqWdJPLdfW2iTu04VoYv',
+      title: "Love Story (Taylor's Version)",
+      url: 'https://open.spotify.com/track/1vrd6UOGamcKNGnSHJQlSt',
     },
     theme: {
       accent: '#f8e3a0',
@@ -271,23 +323,26 @@ export const eras: Era[] = [
     },
     images: [
       {
+        src: '/assets/photos/1762298664046.jpg',
+        alt: 'Nos dois dancando felizes na vibe da era Fearless.',
+      },
+      {
         src: '/assets/eras/fearless.svg',
-        alt: 'Golden sunrise gradient for the Fearless era.',
+        alt: 'Gradiente dourado inspirado na Fearless Era.',
       },
     ],
   },
   {
     id: 'debut',
     title: 'Debut Era',
-    period: '2006 — 2008',
-    tagline: 'Starry country nights, porch light waltzes, first-love notes.',
-    quote: '“When you think happiness, I hope you think that little black dress.”',
+    period: '2006 - 2008',
+    quote: '"When you think Tim McGraw, I hope you think of me."',
     quoteSource: 'Tim McGraw',
     summary:
-      'Hay bale dates, writing names in notebooks, and the tender feeling of falling headfirst for the first time.',
+      'Nosso amor e meu norte: onde voce estiver, e la que eu quero ficar.',
     song: {
       title: 'Tim McGraw',
-      url: 'https://open.spotify.com/track/1u8c2t2Cy7UBoG4ArRcF5g',
+      url: 'https://open.spotify.com/track/0Om9WAB5RS09L80DyOfTNa',
     },
     theme: {
       accent: '#a8d8a0',
@@ -297,22 +352,26 @@ export const eras: Era[] = [
     },
     images: [
       {
+        src: '/assets/photos/1762298664068.png',
+        alt: 'Nos dois em clima country doce, lembrando a era Debut.',
+      },
+      {
         src: '/assets/eras/debut.svg',
-        alt: 'Fresh meadow gradient for the Debut era.',
+        alt: 'Gradiente verde inspirado na Debut Era.',
       },
     ],
   },
   {
     id: 'ttpd',
     title: 'The Tortured Poets Era',
-    period: '2024 — ∞',
-    tagline: 'Typewritten promises, moody poems, and rain-soaked kisses.',
-    quote: '“You already are the best thing I’ve ever written.”',
+    period: '2024 - em diante',
+    quote: '"I love you."',
+    quoteSource: 'Fortnight (feat. Post Malone)',
     summary:
-      'Ink-stained fingers, love letters on hotel stationery, and quiet moments that feel like forever chapters.',
+      'Ate nas paginas mais sombrias, eu encontro luz quando penso em nos dois.',
     song: {
-      title: 'Fortnight',
-      url: 'https://open.spotify.com/track/3Sqq6FR0QLRm3IdZtcHZ0z',
+      title: 'Fortnight (feat. Post Malone)',
+      url: 'https://open.spotify.com/track/2OzhQlSqBEmt7hmkYxfT6m',
     },
     theme: {
       accent: '#e4e0d5',
@@ -322,8 +381,12 @@ export const eras: Era[] = [
     },
     images: [
       {
+        src: '/assets/photos/1762298664073.jpg',
+        alt: 'Nos dois em foto intimista para a era The Tortured Poets.',
+      },
+      {
         src: '/assets/eras/ttpd.svg',
-        alt: 'Muted ink gradient for The Tortured Poets era.',
+        alt: 'Gradiente neutro inspirado em The Tortured Poets Era.',
       },
     ],
   },
@@ -333,3 +396,4 @@ export const eraMap = eras.reduce<Record<EraSlug, Era>>((acc, era) => {
   acc[era.id] = era
   return acc
 }, {} as Record<EraSlug, Era>)
+

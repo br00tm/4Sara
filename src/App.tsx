@@ -3,16 +3,14 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { ArrowUpRight, Calendar, Music, Shuffle, Sparkles, X } from 'lucide-react'
 import type { Era, EraSlug } from './data/eras'
 import { eraMap, eras } from './data/eras'
-import type { RomanticTask } from './data/tasks'
-import { getRandomTask, romanticTasks } from './data/tasks'
 import { useDaysSince } from './hooks/useDaysSince'
 
 type ShuffleResult = {
   era: Era
-  task: RomanticTask
+  phrase: string
 }
 
-const relationshipStartISO = '2021-09-22'
+const relationshipStartISO = '2023-12-16' // Ajuste para a data oficial do casal
 const relationshipStart = new Date(`${relationshipStartISO}T00:00:00`)
 
 const getRandomEra = (exclude?: EraSlug) => {
@@ -26,6 +24,24 @@ const formatDate = (date: Date, locale = 'pt-BR') =>
     month: 'long',
     year: 'numeric',
   }).format(date)
+
+const romanticSummaries: Record<EraSlug, string> = {
+  showgirl:
+    'Prometo te amar com calma nos dias comuns e com brilho de show nas noites especiais.',
+  lover: 'Cada batida do meu coracao sussurra: eu escolho voce, hoje e sempre.',
+  midnights: 'O nosso amor e meu lugar seguro, meu palco favorito e meu melhor refrano.',
+  folklore: 'Vamos continuar escrevendo capitulos onde o final feliz e so o comeco.',
+  evermore: 'Nada e mais bonito do que dividir sonhos e cobertas com voce.',
+  '1989': 'Voce e o verso que faltava na cancao que eu sempre quis cantar.',
+  reputation: 'Nosso amor e constelacao: mesmo de olhos fechados, eu encontro o caminho ate voce.',
+  red: 'Segurar sua mao transforma qualquer segunda-feira em noite estrelada.',
+  'speak-now': 'Que nossos planos tenham o tamanho da nossa coragem de amar.',
+  fearless: 'Quando penso em futuro, so consigo imaginar seu sorriso abrindo a porta de casa.',
+  debut: 'Nosso amor e meu norte: onde voce estiver, e la que eu quero ficar.',
+  ttpd: 'Ate nas paginas mais sombrias, eu encontro luz quando penso em nos dois.',
+}
+
+const getRomanticSummary = (id: EraSlug) => romanticSummaries[id]
 
 const EraImage = ({ era }: { era: Era }) => {
   const image = era.images[0]
@@ -58,6 +74,7 @@ const EraCard = ({
   <button
     type="button"
     onClick={() => onSelect(era.id)}
+    aria-pressed={isActive}
     className={[
       'group relative flex h-full flex-col overflow-hidden rounded-3xl border transition-all duration-300',
       'border-white/10 bg-white/[0.03] p-6 text-left shadow-lg shadow-black/20 backdrop-blur',
@@ -77,7 +94,7 @@ const EraCard = ({
     <div className="mt-4 space-y-2">
       <h3 className="font-display text-xl font-semibold text-white sm:text-2xl">{era.title}</h3>
       <p className="text-sm text-slate-200/80 sm:text-base">{era.period}</p>
-      <p className="text-sm text-slate-300/80">{era.tagline}</p>
+      <p className="text-sm text-slate-300/80">{era.summary}</p>
     </div>
   </button>
 )
@@ -98,6 +115,11 @@ const ShuffleOverlay = ({
         exit={{ opacity: 0 }}
         transition={{ duration: 0.25 }}
         className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/70 backdrop-blur"
+        onClick={(event) => {
+          if (event.target === event.currentTarget) {
+            onClose()
+          }
+        }}
       >
         <motion.div
           initial={{ y: 40, opacity: 0, scale: 0.95 }}
@@ -108,6 +130,7 @@ const ShuffleOverlay = ({
           aria-modal="true"
           aria-labelledby="shuffle-result-title"
           className="relative mx-4 w-full max-w-xl overflow-hidden rounded-3xl border border-white/12 bg-slate-950/90 p-8 shadow-2xl shadow-black/40 ring-1 ring-white/10 backdrop-blur-xl"
+          onClick={(event) => event.stopPropagation()}
         >
           <button
             type="button"
@@ -126,7 +149,7 @@ const ShuffleOverlay = ({
               >
                 {result.era.title}
               </h2>
-              <p className="text-sm text-slate-300">{result.era.tagline}</p>
+              <p className="text-sm text-slate-300">{result.era.summary}</p>
               <a
                 href={result.era.song.url}
                 target="_blank"
@@ -140,10 +163,9 @@ const ShuffleOverlay = ({
             </div>
             <div className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-inner shadow-black/20">
               <p className="flex items-center gap-2 text-xs uppercase tracking-[0.4em] text-slate-300/70">
-                <Sparkles size={16} aria-hidden /> Tarefa romântica
+                <Sparkles size={16} aria-hidden /> Frase romantica
               </p>
-              <h3 className="mt-3 text-lg font-semibold text-white">{result.task.title}</h3>
-              <p className="mt-2 text-sm text-slate-200/80">{result.task.prompt}</p>
+              <p className="mt-3 text-lg font-semibold text-white">{result.phrase}</p>
             </div>
           </div>
         </motion.div>
@@ -184,7 +206,7 @@ const EraHighlight = ({
       <blockquote className="rounded-3xl border border-white/15 bg-black/30 p-6 text-left shadow-inner shadow-black/30">
         <p className="font-display text-xl text-white sm:text-2xl">{era.quote}</p>
         {era.quoteSource ? (
-          <footer className="mt-2 text-sm text-slate-300/80">— {era.quoteSource}</footer>
+          <footer className="mt-2 text-sm text-slate-300/80">- {era.quoteSource}</footer>
         ) : null}
       </blockquote>
       <div className="flex flex-wrap items-center gap-3">
@@ -194,7 +216,7 @@ const EraHighlight = ({
           className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/15 px-5 py-2 text-sm font-semibold text-white shadow shadow-black/20 transition hover:bg-white/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
         >
           <Music size={18} aria-hidden />
-          Ouvir música tema
+          Ouvir mAsica tema
           <ArrowUpRight size={16} aria-hidden />
         </button>
         <button
@@ -214,7 +236,7 @@ const EraHighlight = ({
 )
 
 const App = () => {
-  const [currentEraId, setCurrentEraId] = useState<EraSlug>('lover')
+  const [currentEraId, setCurrentEraId] = useState<EraSlug>('showgirl')
   const [shuffleResult, setShuffleResult] = useState<ShuffleResult | null>(null)
 
   const daysTogether = useDaysSince(relationshipStart)
@@ -224,9 +246,9 @@ const App = () => {
 
   const handleShuffle = () => {
     const nextEra = getRandomEra(currentEraId)
-    const task = getRandomTask()
+    const phrase = getRomanticSummary(nextEra.id)
     setCurrentEraId(nextEra.id)
-    setShuffleResult({ era: nextEra, task })
+    setShuffleResult({ era: nextEra, phrase })
   }
 
   const closeShuffle = () => setShuffleResult(null)
@@ -254,12 +276,12 @@ const App = () => {
         <header className="space-y-8">
           <div className="flex flex-wrap items-end justify-between gap-6">
             <div className="space-y-3">
-              <p className="text-xs uppercase tracking-[0.4em] text-slate-300/70">Nossa história</p>
+              <p className="text-xs uppercase tracking-[0.4em] text-slate-300/70">Nossa historia</p>
               <h1 className="font-display text-4xl font-semibold text-white sm:text-5xl md:text-6xl">
                 As nossas eras
               </h1>
               <p className="max-w-2xl text-sm text-slate-300/90 sm:text-base">
-                Uma timeline romântica inspirada nas eras da Taylor para eternizar os nossos momentos
+                Uma timeline romantica inspirada nas eras da Taylor para eternizar os nossos momentos
                 favoritos. Escolha a Era que mais combina com o mood do dia ou deixe o destino escolher
                 com o shuffle.
               </p>
@@ -279,7 +301,7 @@ const App = () => {
               {eras.length} eras
             </span>
             <span className="rounded-full border border-white/10 bg-white/5 px-4 py-1">
-              {romanticTasks.length} tarefas românticas
+              {Object.keys(romanticSummaries).length} frases romanticas
             </span>
             <span className="rounded-full border border-white/10 bg-white/5 px-4 py-1">
               Tema escuro &amp; mobile-first
@@ -300,7 +322,7 @@ const App = () => {
                 Escolha outra era
               </h2>
               <p className="text-sm text-slate-300/80 sm:text-base">
-                Explore cada capítulo da nossa história e troque o destaque quando quiser.
+                Explore cada capitulo da nossa historia e troque o destaque quando quiser.
               </p>
             </div>
             <button
@@ -331,3 +353,7 @@ const App = () => {
 }
 
 export default App
+
+
+
+
