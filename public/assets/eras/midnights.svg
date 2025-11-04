@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1280">
+  <defs>
+    <linearGradient id="midnightsGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4b5bff" />
+      <stop offset="100%" stop-color="#120a37" />
+    </linearGradient>
+    <radialGradient id="midnightsHighlight" cx="35%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.65)" />
+      <stop offset="100%" stop-color="rgba(255,255,255,0)" />
+    </radialGradient>
+    <radialGradient id="midnightsGlow" cx="80%" cy="75%" r="45%">
+      <stop offset="0%" stop-color="rgba(125,220,255,0.45)" />
+      <stop offset="100%" stop-color="rgba(125,220,255,0)" />
+    </radialGradient>
+  </defs>
+  <rect width="960" height="1280" rx="48" fill="url(#midnightsGradient)" />
+  <circle cx="340" cy="380" r="300" fill="url(#midnightsHighlight)" opacity="0.34" />
+  <circle cx="760" cy="940" r="280" fill="url(#midnightsGlow)" opacity="0.4" />
+  <text x="80" y="1180" fill="rgba(255,255,255,0.82)" font-family="'Playfair Display', serif" font-size="110" letter-spacing="6">
+    Midnights
+  </text>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1280">
+  <defs>
+    <linearGradient id="ttpdGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e4e0d5" />
+      <stop offset="100%" stop-color="#4a4e5c" />
+    </linearGradient>
+    <radialGradient id="ttpdHighlight" cx="30%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.7)" />
+      <stop offset="100%" stop-color="rgba(255,255,255,0)" />
+    </radialGradient>
+    <radialGradient id="ttpdInk" cx="80%" cy="75%" r="45%">
+      <stop offset="0%" stop-color="rgba(45,50,68,0.6)" />
+      <stop offset="100%" stop-color="rgba(45,50,68,0)" />
+    </radialGradient>
+  </defs>
+  <rect width="960" height="1280" rx="48" fill="url(#ttpdGradient)" />
+  <circle cx="320" cy="360" r="320" fill="url(#ttpdHighlight)" opacity="0.38" />
+  <circle cx="740" cy="960" r="300" fill="url(#ttpdInk)" opacity="0.5" />
+  <text x="80" y="1180" fill="rgba(20,23,36,0.72)" font-family="'Playfair Display', serif" font-size="110" letter-spacing="6">
+    TTPD
+  </text>
+</svg>

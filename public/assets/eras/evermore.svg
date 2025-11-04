@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1280">
+  <defs>
+    <linearGradient id="evermoreGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f1ba7b" />
+      <stop offset="100%" stop-color="#8c3b1e" />
+    </linearGradient>
+    <radialGradient id="evermoreHighlight" cx="65%" cy="30%" r="55%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.75)" />
+      <stop offset="100%" stop-color="rgba(255,255,255,0)" />
+    </radialGradient>
+  </defs>
+  <rect width="960" height="1280" rx="48" fill="url(#evermoreGradient)" />
+  <circle cx="640" cy="360" r="320" fill="url(#evermoreHighlight)" opacity="0.38" />
+  <circle cx="280" cy="980" r="320" fill="url(#evermoreHighlight)" opacity="0.26" />
+  <text x="80" y="1180" fill="rgba(255,255,255,0.78)" font-family="'Playfair Display', serif" font-size="120" letter-spacing="5">
+    Evermore
+  </text>
+</svg>

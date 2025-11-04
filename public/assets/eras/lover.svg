@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1280">
+  <defs>
+    <linearGradient id="loverGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f9a8d4" />
+      <stop offset="50%" stop-color="#fbcfe8" />
+      <stop offset="100%" stop-color="#7dd3fc" />
+    </linearGradient>
+    <radialGradient id="loverHighlight" cx="70%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.8)" />
+      <stop offset="100%" stop-color="rgba(255,255,255,0)" />
+    </radialGradient>
+  </defs>
+  <rect width="960" height="1280" rx="48" fill="url(#loverGradient)" />
+  <circle cx="720" cy="420" r="320" fill="url(#loverHighlight)" opacity="0.4" />
+  <circle cx="260" cy="960" r="320" fill="url(#loverHighlight)" opacity="0.28" />
+  <text x="80" y="1180" fill="rgba(255,255,255,0.82)" font-family="'Playfair Display', serif" font-size="120" letter-spacing="6">
+    Lover
+  </text>
+</svg>

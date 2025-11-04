@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1280">
+  <defs>
+    <linearGradient id="fearlessGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8e3a0" />
+      <stop offset="100%" stop-color="#c2882b" />
+    </linearGradient>
+    <radialGradient id="fearlessHighlight" cx="70%" cy="20%" r="60%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.75)" />
+      <stop offset="100%" stop-color="rgba(255,255,255,0)" />
+    </radialGradient>
+  </defs>
+  <rect width="960" height="1280" rx="48" fill="url(#fearlessGradient)" />
+  <ellipse cx="680" cy="280" rx="360" ry="300" fill="url(#fearlessHighlight)" opacity="0.42" />
+  <ellipse cx="260" cy="960" rx="320" ry="260" fill="url(#fearlessHighlight)" opacity="0.28" />
+  <text x="80" y="1180" fill="rgba(255,255,255,0.78)" font-family="'Playfair Display', serif" font-size="120" letter-spacing="4">
+    Fearless
+  </text>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1280">
+  <defs>
+    <linearGradient id="redGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff9a9e" />
+      <stop offset="100%" stop-color="#c21b31" />
+    </linearGradient>
+    <radialGradient id="redHighlight" cx="25%" cy="65%" r="50%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.7)" />
+      <stop offset="100%" stop-color="rgba(255,255,255,0)" />
+    </radialGradient>
+  </defs>
+  <rect width="960" height="1280" rx="48" fill="url(#redGradient)" />
+  <ellipse cx="240" cy="820" rx="320" ry="300" fill="url(#redHighlight)" opacity="0.36" />
+  <ellipse cx="720" cy="320" rx="360" ry="280" fill="url(#redHighlight)" opacity="0.28" />
+  <text x="80" y="1180" fill="rgba(255,255,255,0.8)" font-family="'Playfair Display', serif" font-size="120" letter-spacing="4">
+    Red
+  </text>
+</svg>
